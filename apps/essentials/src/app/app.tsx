@@ -1,10 +1,9 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import styles from './app.module.scss';
 
-export function App() {
+export function Header() {
   return (
-    <div>
-      <header>
+    <header>
         <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
         <h1>React Essentials</h1>
         <p>
@@ -12,6 +11,13 @@ export function App() {
           going to build!
         </p>
       </header>
+  );
+}
+
+export function App() {
+  return (
+    <div>
+      <Header />
       <main>
         <h2>Time to get started!</h2>
       </main>
