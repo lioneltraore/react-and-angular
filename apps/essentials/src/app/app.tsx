@@ -1,8 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
 import reactImg from '../assets/react-core-concepts.png';
-import componentsImg from '../assets/components.png';
 import { Concept } from '../types/concept';
+import { CORE_CONCEPTS } from '../mocks/data';
 
 const reactDescriptions = ['Fundamental', 'Core', 'Crucial'];
 
@@ -43,14 +42,9 @@ export function App() {
         <section id="core-concepts">
           <h2>Core concepts</h2>
           <ul>
-            <CoreConcepts
-              title="Components"
-              description="The core UI building block."
-              image={componentsImg}
-            />
-            <CoreConcepts />
-            <CoreConcepts />
-            <CoreConcepts />
+            {CORE_CONCEPTS.map((c) => (
+              <CoreConcepts {...c} />
+            ))}
           </ul>
         </section>
       </main>
