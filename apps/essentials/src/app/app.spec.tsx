@@ -8,8 +8,12 @@ describe('App', () => {
     expect(baseElement).toBeTruthy();
   });
 
-  it('should have a greeting as the title', () => {
+  // should have a core concept section
+
+  it('should have a title for core concept section', () => {
     const { getByText } = render(<App />);
-    expect(getByText(/Welcome essentials/gi)).toBeTruthy();
+    expect(getByText(/Core concepts/gi)).toBeTruthy();
   });
+
+  // should have 3 CoreConcept components in core concept section
 });
