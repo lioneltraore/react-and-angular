@@ -12,8 +12,10 @@ describe('App', () => {
 
   it('should have a title for core concept section', () => {
     const { getByText } = render(<App />);
-    expect(getByText(/Core concepts/gi)).toBeTruthy();
+    expect(getByText('Core concepts')).toBeTruthy();
   });
 
   // should have 3 CoreConcept components in core concept section
+
+  // should have examples section
 });

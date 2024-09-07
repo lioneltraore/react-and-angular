@@ -2,6 +2,7 @@
 import { CORE_CONCEPTS } from '../mocks/data';
 import Header from '../components/Header/Header';
 import CoreConcept from '../components/CoreConcept/CoreConcept';
+import TabButton from '../components/TabButton/TabButton';
 
 export function App() {
   return (
@@ -15,6 +16,12 @@ export function App() {
               <CoreConcept {...c} />
             ))}
           </ul>
+        </section>
+
+        <section id="examples">
+            <menu>
+              <TabButton>Components</TabButton>
+            </menu>
         </section>
       </main>
     </div>

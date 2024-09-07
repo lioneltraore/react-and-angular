@@ -1,4 +1,5 @@
 import { Concept } from "../../types/concept";
+import './CoreConcept.module.scss';
 
 export default function CoreConcept(props: Concept) {
   return (
