@@ -9,7 +9,6 @@ describe('App', () => {
   });
 
   // should have a core concept section
-
   it('should have a title for core concept section', () => {
     const { getByText } = render(<App />);
     expect(getByText('Core concepts')).toBeTruthy();

@@ -5,6 +5,11 @@ import CoreConcept from '../components/CoreConcept/CoreConcept';
 import TabButton from '../components/TabButton/TabButton';
 
 export function App() {
+
+  function handleSelect() {
+    console.log('Button triggered - Selection done');
+  }
+
   return (
     <div>
       <Header />
@@ -13,14 +18,17 @@ export function App() {
           <h2>Core concepts</h2>
           <ul>
             {CORE_CONCEPTS.map((c) => (
-              <CoreConcept {...c} />
+              <CoreConcept key={c.title} {...c} />
             ))}
           </ul>
         </section>
 
         <section id="examples">
             <menu>
-              <TabButton>Components</TabButton>
+              <TabButton onSelect={handleSelect}>Components</TabButton>
+              <TabButton>JSX</TabButton>
+              <TabButton>Props</TabButton>
+              <TabButton>State</TabButton>
             </menu>
         </section>
       </main>
